@@ -1,0 +1,448 @@
+@import url('https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans:wght@300&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, h1, h2, h3,h4,h5,h6 {
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 300;
+}
+.hero {
+    background-image: url('images/desktop/image-hero.jpg');
+    background-size: cover;
+    color: hsl(0, 0%, 100%);
+    height: 580px;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 0rem;
+    margin: 0 auto;
+    width: 70%;
+
+}
+nav {
+    width: 35%;
+    height: 50px;
+    /* padding-right: 0.5rem; */
+    display: flex;
+    
+}
+nav ul {
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+    width: 100%;
+    font-weight: 700;
+}
+h1 {
+    font-size: 4rem;
+    width: 40%;
+    border: 1px solid white;
+    padding: 2rem;
+    margin: 5% 15%;
+    text-transform: uppercase;
+}
+.interactive {
+    width: 70%;
+    margin: 0 auto;
+    padding: 2rem 0;
+    height: 550px;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+#interactive-img-container {
+    background-image: url('images/desktop/image-interactive.jpg');
+    width: 55%;
+    height: 400px;
+    background-size: cover;
+}
+.interactive .text {
+    width: 45%;
+    border: 1px solid white;
+    background-color: white;
+    padding: 4rem;
+    position: absolute;
+    right: 10%;
+    bottom: -5%;
+}
+.interactive .text h2, .box-3 .creation h2 {
+    font-size: 2rem;
+    margin: 5% auto;
+    line-height: 1;
+    padding:  .5rem;
+    text-transform: uppercase;
+}
+.box-3 {
+    margin: 5% auto;
+    width: 70%;
+}
+.box-3 .creation{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.box-3 .creation button {
+    padding: 0.3rem 2rem;
+    background-color: transparent;
+    color: hsl(0, 0%, 0%);
+    border: 1px solid hsl(0, 0%, 0%);
+}
+.box-3 .creation button:hover{
+    background-color: hsl(0, 0%, 0%);
+    color: hsl(0, 0%, 100%);
+}
+.box-3 .grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+.box-3 .grid div {
+    height: 350px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+}
+.box-3 .grid .deep-earth{
+    background-image: url('images/desktop/image-deep-earth.jpg');
+}
+.box-3 .grid .night-arcade {
+    background-image: url('images/desktop/image-night-arcade.jpg');
+}
+.box-3 .grid .soccer-team {
+    background-image: url('images/desktop/image-soccer-team.jpg');
+}
+.box-3 .grid .the-grid {
+    background-image: url('images/desktop/image-grid.jpg');
+}
+.box-3 .grid .from-up{
+    background-image: url('images/desktop/image-from-above.jpg');
+}
+.box-3 .grid .pocket-borealis {
+    background-image: url('images/desktop/image-pocket-borealis.jpg');
+}
+.box-3 .grid .the-curiosity {
+    background-image: url('images/desktop/image-curiosity.jpg');
+}
+.box-3 .grid .make-it {
+    background-image: url('images/desktop/image-fisheye.jpg');
+}
+.box-3 .grid div h2 {
+    position: absolute;
+    bottom: 2%;
+    left: 20%;
+    width: 60%;
+    font-size: 2rem;
+    color: hsl(0, 0%, 100%);
+}
+footer {
+    background: hsl(0, 0%, 0%);
+    color: hsl(0, 0%, 100%);
+    padding: 1rem 0;
+}
+footer .connect {
+    width: 70%;
+    margin:3% auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+footer .connect .socials {
+    display: flex;
+    gap: 20px;
+}
+footer .connect .socials i {
+    font-size: 2rem;
+}
+footer .info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 71%;
+    margin: 0 auto;
+}
+footer .info ul {
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+    width: 40%;
+    /* margin: 5% auto; */
+}
+footer .info p {
+    color: hsl(0, 0%, 55%);
+}
+li {
+    padding: 1rem 0;
+}
+li:hover {
+    border-bottom: 2px solid hsl(0, 0%, 100%);
+}
+
+@media screen and (min-width:320px) and (max-width:600px) {
+    .hero {
+        min-height: 100vh;
+        background-image: url('images/mobile/image-hero.jpg');
+    }
+    header {
+        width: 100%;
+        
+        justify-content: space-between;
+        padding: .5rem 1.5rem;
+        z-index: 5;
+        
+        align-items: flex-start;
+        /* border: 1px solid red; */
+        
+        /* transition: all .1s linear; */
+    }
+    header.active {
+        min-height: 100vh;
+        top: 0;
+        position: fixed;
+        background-color: hsl(0, 0%, 0%);
+    }
+    header.active + h1 {
+        opacity: 0;
+    }
+    header img {
+        width: 40%;
+        height: 50px;
+        object-fit: contain;
+    }
+    nav {
+        justify-content: flex-end;
+        align-items: center;
+    }
+    .menu {
+        width: 30%;
+        height: 30px;
+        /* position: ; */
+        top: 3%;
+        right: 6%;
+        justify-content: center;
+        gap: 4px;
+        padding: 0.5rem 0.3rem;
+        display: flex;
+        flex-direction: column;
+    }
+    .menu span{
+        transition: all 1s linear;
+        border-top: 2px solid hsl(0, 0%, 100%)
+    }
+    .menu.active span:nth-child(1) {
+        rotate: 45deg;
+        translate: 0px 5px
+    }
+    .menu.active span:nth-child(2) {
+        opacity: 0;
+    }
+    .menu.active span:nth-child(3) {
+        rotate: -45deg;
+        translate: 0px -7px
+    }
+    .menu.active + #ul {
+        display: flex;
+        opacity: 1;
+    }
+    #ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        width: 100%;
+        left: 0;
+        top: 30%;
+        padding: 2rem 0;
+        /* bottom: 50%; */
+        justify-content: center;
+        gap: 15px;
+        opacity: 0;
+        background-color: transparent;
+        /* min-height: 90vh; */
+        /* border: 1px solid red; */
+        /* z-index: 3; */
+        transition: opacity .2s ease-in-out;
+    }
+    nav ul li {
+        font-size: 1.5rem;
+        text-transform: uppercase;
+        width: 20%;
+        margin: 0 5% 0;
+        padding: 0;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+        width: 90%;
+        margin: 40% auto;
+        padding: 1.5rem 1.7rem;
+    }
+    #interactive-img-container {
+        background-image: url(images/desktop/image-interactive.jpg);
+        width: 88%;
+        height: 250px;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    .interactive .text p {
+        padding: 0 1rem;
+        line-height: 1.5rem;
+        font-weight: bold;
+        color: hsl(0, 0%, 55%);
+    }
+    .interactive {
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+        margin: 20% auto;
+    }
+    .interactive .text {
+        position: relative;
+        width: 100%;
+        padding: 2rem 1.5rem;
+        right: 0;
+        text-align: center;
+    }
+    .box-3 {
+        margin: 5% auto;
+        width: 88%;
+        position: relative;
+    }
+    .box-3 .creation{
+        flex-direction: column;
+        height: 1380px;
+        position: absolute;
+        z-index: 3;
+        top: -10%;
+        width: 100%;
+    }
+    .box-3 .creation h2 {
+        text-align: center;
+    }
+    .box-3 .creation button {
+        font-weight: bold;
+        width: 50%;
+        padding: .8rem;
+        letter-spacing: 5px;
+        text-transform: uppercase;
+    }
+    .box-3 .grid {
+        grid-template-columns: 1fr;
+        margin: 45% auto;
+    }
+    
+    .box-3 .grid div {
+        height: 130px;
+        display: flex;
+        /* align-items: center; */
+        padding: 0 2rem;
+        
+    }
+    .box-3 .grid div h2{
+        left: 5%;
+        text-transform: uppercase;
+        font-size: 1.7rem;
+        width: 55%;
+        bottom: 10%;
+        /* background: ; */
+        padding-right: 1.5rem;
+    }
+    .box-3 .grid .deep-earth{
+        background-image: linear-gradient(to right, hsla(0, 0%, 55%, 0.203), transparent),url('images/mobile/image-deep-earth.jpg');
+    }
+    .box-3 .grid .night-arcade {
+        background-image: linear-gradient(to right, hsla(0, 0%, 55%, 0.203), transparent), url('images/mobile/image-night-arcade.jpg');
+    }
+    .box-3 .grid .soccer-team {
+        background-image: linear-gradient(to right, hsla(0, 0%, 55%, 0.203), transparent),url('images/mobile/image-soccer-team.jpg');
+    }
+    .box-3 .grid .the-grid {
+        background-image: linear-gradient(to right, hsla(0, 0%, 55%, 0.203), transparent),url('images/mobile/image-grid.jpg');
+    }
+    .box-3 .grid .from-up{
+        background-image: linear-gradient(to right, hsla(0, 0%, 55%, 0.203), transparent),url('images/mobile/image-from-above.jpg');
+    }
+    .box-3 .grid .pocket-borealis {
+        background-image: linear-gradient(to right, hsla(0, 0%, 55%, 0.203), transparent),url('images/mobile/image-pocket-borealis.jpg');
+    }
+    .box-3 .grid .the-curiosity {
+        background-image: linear-gradient(to right, hsla(0, 0%, 55%, 0.203), transparent),url('images/mobile/image-curiosity.jpg');
+    }
+    .box-3 .grid .make-it {
+        background-image: linear-gradient(to right, hsla(0, 0%, 55%, 0.203), transparent),url('images/mobile/image-fisheye.jpg');
+    }
+    footer {
+        padding: 3rem 0 4rem;
+        font-family: 'Alata', sans-serif;
+        position: relative;
+    }
+    footer .connect img {
+        object-fit: contain;
+        width: 50%;
+    }
+    footer .connect .socials{
+        position: absolute;
+        bottom: 23%;
+    }
+
+    footer .info p {
+        margin-top: 20%;
+    }
+    footer .info ul, footer .info, footer .connect  {
+        flex-direction: column;
+        width: 90%;
+        align-items: center;
+    }
+
+}
+
+@media screen and (min-width: 700px) and (max-width: 1024px) {
+    header {
+        width: 90%;
+    }
+    header img {
+        object-fit: contain;
+        width: 20%;
+    }
+    nav {
+        width: 50%;
+    }
+    h1 {
+        width: 65%;
+        margin: 5%;
+    }
+    .interactive {
+        width: 90%;
+    }
+    #interactive-img-container {
+        width: 65%;
+    }
+    .interactive .text {
+        width: 65%;
+        padding: 3rem;
+    }
+    .box-3 {
+        width: 90%;
+    }
+    .box-3 .creation h2 {
+        margin: 5% 0;
+    }
+    footer .connect{
+        width: 90%;
+    }
+    footer .connect img {
+        width: 20%;
+    }
+    footer .connect .socials i {
+        font-size: 1.5rem;
+    }
+    footer .info {
+        width: 90%;
+    }
+}
